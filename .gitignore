@@ -1,0 +1,22 @@
+# Build output
+build/
+*.exe
+*.obj
+*.pdb
+*.ilk
+
+# Database files
+pgdata/
+
+# IDE/Editor
+.vscode/
+.vs/
+.gemini/
+
+# Python cache
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Temporary or local generated files
+build_err.txt
