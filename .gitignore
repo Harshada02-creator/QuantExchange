@@ -20,3 +20,7 @@ __pycache__/
 
 # Temporary or local generated files
 build_err.txt
+
+# Temporary downloaded investigation artifacts
+test.html
+*.html
