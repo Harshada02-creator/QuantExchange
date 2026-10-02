@@ -3,7 +3,7 @@
 ## Current roles
 
 ### A — NSE public research data
-Purpose: India daily quant layer.
+Purpose: Daily India-focused quant baseline.
 Status: **NEXT**
 
 ### B — IEX HIST TOPS
@@ -11,7 +11,7 @@ Purpose: small intraday microstructure pilot.
 Status: **AFTER BASIC NSE PIPELINE WORKS**
 
 ### C — FI-2010
-Purpose: academic benchmark.
+Purpose: academic LOB benchmark.
 Status: **BENCHMARK**
 
 ### D — L3/order replay
@@ -20,11 +20,11 @@ Status: **LATER**
 
 ## Immediate action
 
-Do not download all datasets at once.
+Do not download all datasets at once. No bulk historical download.
 
 Sequence:
-1. Confirm exact official NSE public dataset/file and access conditions.
-2. Acquire a small NSE sample manually.
+1. Confirm exact official NSE public dataset/file (`CM-UDiFF Common Bhavcopy Final (zip)`) and access conditions.
+2. Acquire ONE REAL NSE FILE manually.
 3. Ingest and validate it through the existing data-foundation pipeline.
 4. Confirm size and data quality.
 5. Run the IEX TOPS one-day pilot.

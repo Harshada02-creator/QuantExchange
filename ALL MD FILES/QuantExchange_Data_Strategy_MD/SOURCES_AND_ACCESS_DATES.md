@@ -41,11 +41,14 @@ https://www.nseindia.com/resources/historical-reports-capital-market-daily-month
 Security-wise price/volume:
 https://www.nseindia.com/historical/price-and-volume-data-per-security
 
-Verified for this pack:
+Verified for this pack (2026-10-02):
+- The CURRENT official NSE Bhavcopy route is `CM-UDiFF Common Bhavcopy Final (zip)`.
+- The old route `CM - Bhavcopy(csv)` and `CM - Common Bhavcopy (csv)` were discontinued effective July 08, 2024.
 - NSE has a research-data classification.
 - Students/researchers are recognized as non-commercial users in policy.
 - Exact permitted handling/use is governed by the relevant policy/documentation/undertaking.
 - Public research data is distinct from paid historical order/trade products.
+- No real NSE file has yet been downloaded/ingested.
 
 ## FI-2010
 

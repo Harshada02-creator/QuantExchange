@@ -20,33 +20,49 @@ Then read:
 Also read the existing QuantExchange master context and inspect the current repository.
 
 CURRENT VERIFIED STATE:
-- exchange core frozen
-- 41/41 exchange tests passed
-- Data Foundation Step 1 implemented
-- Python validation pipeline verified
+COMPLETED:
+- exchange core
+- risk
+- lifecycle
+- cancellation
+- market orders
+- PostgreSQL
+- persistence verification
+- test isolation
+- data-foundation scaffold
+- fake-data cleanup
+- GitHub cleanup
 
-CURRENT TASK:
-Acquire and ingest a SMALL real NSE public historical research-data sample.
+NOT COMPLETED:
+- real NSE ingestion
+- IEX ingestion
+- FI-2010 ingestion
+- feature engineering
+- ML/quant models
+- AI market assistant
+- paper trading product
+- dashboard/API
+
+NEXT ACTIVE DATA TASK:
+Acquire ONE genuine NSE public historical market-data file from the official NSE source (`CM-UDiFF Common Bhavcopy Final (zip)`) and validate it through the existing data foundation.
 
 Do NOT:
-- download the full dataset
+- download the full dataset or perform a bulk historical download
 - download IEX yet
 - train ML models
 - build features yet
 - modify the frozen C++ exchange core
 
 First:
-1. Identify the exact official NSE public/research dataset and official download page.
-2. Record source URL, access date, fields, date range, symbol universe, and applicable usage conditions.
-3. Download only a small manual sample.
-4. Run it through the existing intelligence ingestion/validation pipeline.
-5. Store normalized rows in the existing PostgreSQL data layer.
-6. Produce a data-quality summary.
-7. Record dataset provenance/version/hash.
-
-Then run:
-- all existing C++ regression tests
-- all Python data-foundation tests
+1. Obtain ONE real official NSE file.
+2. Preserve raw file unchanged.
+3. Record source/provenance.
+4. Inspect schema.
+5. Normalize.
+6. Ingest.
+7. Validate source-to-database values.
+8. Run tests.
+9. STOP.
 
 Report only actual results.
 If access/usage terms are ambiguous, STOP and report the ambiguity instead of downloading at scale.

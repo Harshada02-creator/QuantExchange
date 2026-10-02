@@ -14,7 +14,8 @@ Record:
 
 ## Step 1 — NSE baseline
 
-Acquire a small official public sample.
+Acquire ONE genuine NSE public historical market-data file from the official NSE source (`CM-UDiFF Common Bhavcopy Final (zip)`).
+Do NOT perform a bulk historical download at this stage.
 
 Validate:
 - schema
@@ -23,7 +24,7 @@ Validate:
 - OHLC consistency
 - missingness
 
-Then expand only if the archive and usage terms support it.
+Then expand only if the archive and usage terms support it and the milestone is accepted.
 
 ## Step 2 — IEX pilot
 

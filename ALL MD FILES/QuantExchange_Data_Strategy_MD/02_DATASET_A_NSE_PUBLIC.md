@@ -2,95 +2,55 @@
 
 ## Role
 
-India-focused baseline for daily quant research.
+DATASET A — NSE
+Daily India-focused quant baseline.
 
 ## Appropriate uses
 
-- OHLC / price research
+The intended data includes fields appropriate to:
+- OHLC
+- volume
+- turnover where available
 - returns
 - volatility
-- momentum
-- volume / turnover analysis
-- regime detection
+- regime analysis
 - daily backtesting
 
 ## Not appropriate as the only source for
 
+It is NOT an order-book/L3 dataset.
+It is NOT suitable for order-level replay.
+Do not use for:
 - bid/ask spread
 - intraday order imbalance
 - order-book reconstruction
-- order-level replay
 
-## Important policy distinction
+## Current Project Status
 
-Do not mix:
-1. public/research-oriented historical reports and data that may be available without cost under the research-data policy; and
-2. paid/contractual historical Order & Trade products.
-
-The zero-budget plan starts with the public research-data category.
+- The project has NOT yet ingested real NSE data.
+- The previous fake NSE dataset was synthetic and has been permanently removed.
+- The old fake provenance hash `74470f15696e29fa` must never be used again.
 
 ## Current official sources (access checked 2026-10-02)
 
+The CURRENT official NSE Bhavcopy route is:
+`CM-UDiFF Common Bhavcopy Final (zip)`
+
+The old routes `CM - Bhavcopy(csv)` and `CM - Common Bhavcopy (csv)` were discontinued effective July 08, 2024.
+Do NOT document guessed URLs such as `sec_bhavdata_full_<date>.csv` as the primary current ingestion route. The actual file URL must only be recorded after it is verified from the current official NSE site.
+
 NSE Data Sharing & Usage Policy:
 https://www.nseindia.com/static/market-data/nse-data-policy
-
-NSE research initiatives:
 https://www.nseindia.com/static/research/research-initiatives
-
-NSE research-data classification:
-https://nsearchives.nseindia.com/web/sites/default/files/inline-files/Data%20list%20under%20NSE%20Data%20Sharing%20Policy%20for%20Research%20and%20Analysis_20250728.pdf
-
-NSE historical reports:
 https://www.nseindia.com/resources/historical-reports-capital-market-daily-monthly-archives
-
-NSE security-wise price/volume:
 https://www.nseindia.com/historical/price-and-volume-data-per-security
 
-## Current interpretation
-
-NSE recognizes students/researchers as non-commercial users. Exact use restrictions are governed by the applicable policy, documentation, undertaking, or agreement.
-
-NSE's current website materials also distinguish freely available research data from restricted or paid data categories.
-
-Prefer official downloads. Do not scrape blindly.
+NSE recognizes students/researchers as non-commercial users. Exact use restrictions are governed by the applicable policy, documentation, undertaking, or agreement. Prefer official downloads. Do not scrape blindly.
 
 ## First proposed universe
 
-Start with 10–20 liquid Indian equities.
-
-Example candidates:
-- TCS
-- INFY
-- RELIANCE
-- HDFCBANK
-- ICICIBANK
-- SBIN
-- ITC
-- LT
-- BHARTIARTL
-- AXISBANK
-
-Freeze the exact universe before bulk ingestion.
-
-## First proposed period
-
-Target multiple years if the freely accessible official archive actually provides that period. Do not promise a fixed five-year span until the exact archive is checked.
-
-## Required normalized fields
-
-At minimum:
-- symbol
-- trading_date
-- open
-- high
-- low
-- close
-- volume
-
-Add consistently available official fields where useful:
-- turnover
-- number of trades
-- delivery quantities
+Start with ONE REAL NSE FILE.
+Do not perform a bulk historical download at this stage.
 
 ## Data-quality requirements
 
@@ -102,7 +62,6 @@ Check:
 - holiday/weekend contamination
 - symbol changes
 - corporate-action issues where available
-- survivorship-bias risks
 
 ## Reproducibility
 

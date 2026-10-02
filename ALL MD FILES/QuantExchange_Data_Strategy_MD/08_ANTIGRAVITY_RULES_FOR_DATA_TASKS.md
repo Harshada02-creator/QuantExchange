@@ -12,11 +12,12 @@ Read the core QuantExchange master context SIDE-BY-SIDE with the current reposit
 - 06_DATA_PIPELINE_AND_SPLITS.md
 - 07_PHASE_2_EXECUTION_PLAN.md
 - 09_MASTER_CURRENT_DATASET_PLAN.md
+- 10_NEXT_TASK_PROMPT.md
 
 ## Hard rules
 
 1. Do not modify the frozen C++ exchange core during data tasks unless explicitly required.
-2. Do not download a large dataset without reporting estimated storage first.
+2. Do not download a large dataset without reporting estimated storage first. No bulk historical download at this stage.
 3. Do not treat a public URL as permission to redistribute data.
 4. Read the actual license/terms.
 5. Never commit raw market data to Git.

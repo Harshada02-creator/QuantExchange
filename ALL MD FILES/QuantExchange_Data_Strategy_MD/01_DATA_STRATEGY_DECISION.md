@@ -6,21 +6,22 @@ Build a realistic AI/quant market-intelligence layer on top of the frozen QuantE
 
 ## Recommended zero-cost strategy
 
-### Dataset A — NSE public historical research data
-**Role:** India-focused daily baseline.
+### DATASET A — NSE
+Daily India-focused quant baseline.
 
-Use for:
-- daily returns
+The intended data includes fields appropriate to:
+- OHLC
+- volume
+- turnover where available
+- returns
 - volatility
-- momentum
-- volume behavior
-- regime detection
-- daily backtesting
+- regime analysis
 
-Do **not** claim it provides bid/ask spread, intraday order flow, full order-book imbalance, or order-level replay.
+It is NOT an order-book/L3 dataset.
+It is NOT suitable for order-level replay.
 
-### Dataset B — IEX HIST TOPS
-**Role:** small intraday microstructure pilot.
+### DATASET B — IEX TOPS
+Small intraday microstructure pilot.
 
 Use for:
 - best bid/ask
@@ -41,8 +42,8 @@ Important:
 
 Start with **one trading day and 3–5 symbols**, not months of raw files.
 
-### Dataset C — FI-2010
-**Role:** academic benchmark.
+### DATASET C — FI-2010
+Academic LOB benchmark.
 
 Use for:
 - LOB model benchmarking
@@ -51,7 +52,9 @@ Use for:
 
 Do not use it as current Indian/U.S. market data or as raw order-by-order replay.
 
-### Dataset D — future advanced L3 source
+### FUTURE L3 DATA
+Nasdaq ITCH / Databento / LOBSTER etc. deferred.
+
 Candidates:
 - Nasdaq public ITCH samples
 - Databento XNAS.ITCH MBO
@@ -69,16 +72,6 @@ Potentially useful for a later crypto high-frequency track, but it changes the m
 
 ### Paid NSE order/trade data
 Not required for the initial zero-budget research track.
-
-## Role map
-
-| Role | Source | First use |
-|---|---|---|
-| India daily quant | NSE public research data | Daily models |
-| Intraday microstructure pilot | IEX TOPS | Quotes/trades/features |
-| Academic LOB benchmark | FI-2010 | Benchmarking |
-| Advanced L3 replay | Nasdaq ITCH / Databento / LOBSTER | Later |
-| Live streaming | TBD after licensing review | Much later |
 
 ## Selection rule
 
