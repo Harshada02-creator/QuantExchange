@@ -23,3 +23,10 @@ build_err.txt
 
 # Temporary downloaded investigation artifacts
 test.html
+
+# Raw Vendor/Exchange Data (Do not redistribute)
+intelligence/data/raw/
+*.csv
+
+# Local Database Logs
+pg_log.txt
